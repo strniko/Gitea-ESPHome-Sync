@@ -44,7 +44,7 @@ async def perform_sync():
             print("[ERROR] git fetch failed. Aborting.")
             return False
 
-        if not run_git_cmd(["git", "reset", "--hard"]):
+        if not run_git_cmd(["git", "reset", "--hard", "origin/master"]):
             print("[ERROR] git reset --hard failed. Aborting.")
             return False
 
